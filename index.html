@@ -1,218 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Model School, Baharagora</title>
-    <!-- Tailwind CSS for Modern Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for Beautiful Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Poppins', sans-serif; }
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(4, 47, 46, 0.7), rgba(4, 47, 46, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-emerald-50/30 text-slate-800 relative overflow-x-hidden">
 
-    <!-- TOP BAR (Contact Info) -->
-    <div class="bg-indigo-900 text-white text-sm py-2 px-4 flex flex-wrap justify-between items-center">
-        <div>
-            <i class="fas fa-map-marker-alt text-amber-400 mr-2"></i> Baharagora, Jhargram Border, Jharkhand
+    <div class="bg-emerald-900 text-white text-sm py-2 px-4 flex flex-wrap justify-between items-center relative z-30">
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-map-marker-alt text-emerald-400 mr-2"></i> Baharagora, Jhargram Border, Jharkhand
         </div>
-        <div class="space-x-4">
-            <span><i class="fas fa-phone text-amber-400 mr-1"></i> +91 9334631251</span>
-            <span><i class="fas fa-envelope text-amber-400 mr-1"></i> modelschool00001@gmail.com</span>
+        <div class="space-x-4 flex flex-wrap items-center">
+            <span class="font-semibold text-emerald-300">Gopesh Mishra ➡ </span>
+            <span><i class="fas fa-phone text-emerald-400 mr-1"></i> +91 9334631251</span>
+            <span><i class="fas fa-envelope text-emerald-400 mr-1"></i> modelschool00001@gmail.com</span>
         </div>
     </div>
 
-    <!-- NAVIGATION BAR -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-emerald-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="bg-indigo-900 text-amber-400 p-2.5 rounded-full text-xl font-bold shadow-md">
+                <div class="bg-emerald-800 text-emerald-300 p-2.5 rounded-xl text-xl font-bold shadow-md shadow-emerald-800/20">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
-                    <span class="text-xl font-bold text-indigo-900 block tracking-wide">MODEL SCHOOL</span>
-                    <span class="text-xs text-amber-600 font-semibold tracking-widest block uppercase">Baharagora</span>
+                    <span class="text-xl font-bold text-emerald-955 block tracking-wide text-emerald-900">MODEL SCHOOL</span>
+                    <span class="text-xs text-emerald-600 font-semibold tracking-widest block uppercase">Baharagora</span>
                 </div>
             </div>
-            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
-                <a href="#home" class="hover:text-indigo-950 transition">Home</a>
-                <a href="#about" class="hover:text-indigo-950 transition">About Us</a>
-                <a href="#facilities" class="hover:text-indigo-950 transition">Facilities</a>
-                <a href="#gallery" class="hover:text-indigo-950 transition">Gallery</a>
-                <a href="#contact" class="bg-indigo-900 text-white px-5 py-2 rounded-full hover:bg-amber-500 hover:text-indigo-950 transition shadow-md">Contact Us</a>
+            
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600 items-center">
+                <a href="#home" class="hover:text-emerald-700 transition-colors">Home</a>
+                <a href="#about" class="hover:text-emerald-700 transition-colors">About Us</a>
+                <a href="#facilities" class="hover:text-emerald-700 transition-colors">Facilities</a>
+                <a href="#gallery" class="hover:text-emerald-700 transition-colors">Gallery</a>
+                <a href="#contact" class="bg-emerald-800 text-white px-5 py-2 rounded-lg hover:bg-emerald-700 transition shadow-md shadow-emerald-800/10">Contact Us</a>
             </div>
+
+            <button id="menuBtn" class="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 p-2.5 rounded-lg transition focus:outline-none z-50">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- HERO SECTION (Welcome Area) -->
-    <section id="home" class="hero-bg h-[550px] flex items-center text-white text-center px-4">
-        <div class="max-w-4xl mx-auto">
-            <span class="bg-amber-500 text-indigo-950 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">Shaping Future Leaders</span>
-            <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-6 drop-shadow-md">Welcome to Model School, Baharagora</h1>
-            <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto font-light">Providing quality education, modern infrastructure, and moral values to empower the students of Baharagora.</p>
-            <div class="space-x-4">
-                <a href="#about" class="bg-amber-500 text-indigo-950 px-8 py-3.5 rounded-md font-semibold hover:bg-amber-400 transition inline-block shadow-lg">Explore School</a>
-                <a href="#contact" class="border-2 border-white px-8 py-3.5 rounded-md font-semibold hover:bg-white hover:text-indigo-950 transition inline-block">Admission Info</a>
+    <div id="sidebarOverlay" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300 execution-disabled"></div>
+    
+    <div id="sidebar" class="fixed top-0 right-0 h-full w-[85%] sm:w-[40%] bg-white/95 backdrop-blur-md z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out p-8 border-l border-emerald-100 flex flex-col justify-between">
+        <div>
+            <div class="flex justify-between items-center mb-10">
+                <h3 class="text-lg font-bold text-emerald-900 uppercase tracking-wider">Quick Links</h3>
+                <button id="closeBtn" class="text-slate-400 hover:text-emerald-800 text-2xl focus:outline-none">&times;</button>
+            </div>
+            <div class="flex flex-col space-y-6 text-lg font-medium text-slate-700">
+                <a href="#home" class="sidebar-link hover:text-emerald-700 flex items-center space-x-3 p-2 rounded-lg hover:bg-emerald-50 transition"><i class="fas fa-home w-6 text-emerald-600"></i> <span>Home</span></a>
+                <a href="#about" class="sidebar-link hover:text-emerald-700 flex items-center space-x-3 p-2 rounded-lg hover:bg-emerald-50 transition"><i class="fas fa-info-circle w-6 text-emerald-600"></i> <span>About Us</span></a>
+                <a href="#facilities" class="sidebar-link hover:text-emerald-700 flex items-center space-x-3 p-2 rounded-lg hover:bg-emerald-50 transition"><i class="fas fa-school w-6 text-emerald-600"></i> <span>Facilities</span></a>
+                <a href="#gallery" class="sidebar-link hover:text-emerald-700 flex items-center space-x-3 p-2 rounded-lg hover:bg-emerald-50 transition"><i class="fas fa-images w-6 text-emerald-600"></i> <span>Gallery</span></a>
+                <a href="#contact" class="sidebar-link hover:text-emerald-700 flex items-center space-x-3 p-2 rounded-lg hover:bg-emerald-50 transition"><i class="fas fa-envelope w-6 text-emerald-600"></i> <span>Contact Us</span></a>
             </div>
         </div>
-    </section>
+        <div class="border-t border-slate-100 pt-6 text-center text-xs text-slate-500">
+            <p>Model School, Baharagora</p>
+        </div>
+    </div>
 
-    <!-- HIGHLIGHT CARDS -->
-    <section class="max-w-7xl mx-auto px-6 -mt-16 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-indigo-900 flex items-start space-x-4">
-            <i class="fas fa-book-reader text-3xl text-indigo-900 mt-1"></i>
-            <div>
-                <h3 class="text-xl font-bold mb-2 text-indigo-950">Expert Faculty</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">Highly qualified and dedicated teachers committed to individual student growth.</p>
-            </div>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-amber-500 flex items-start space-x-4">
-            <i class="fas fa-flask text-3xl text-amber-500 mt-1"></i>
-            <div>
-                <h3 class="text-xl font-bold mb-2 text-indigo-950">Modern Labs</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">Well-equipped Science, Mathematics, and Computer labs for practical learning.</p>
-            </div>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-indigo-950 flex items-start space-x-4">
-            <i class="fas fa-trophy text-3xl text-indigo-950 mt-1"></i>
-            <div>
-                <h3 class="text-xl font-bold mb-2 text-indigo-950">Sports & Arts</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">Encouraging students to excel in co-curricular activities, sports, and cultural events.</p>
-            </div>
-        </div>
-    </section>
+    <div id="mainContent" class="transition-all duration-300">
 
-    <!-- ABOUT US SECTION -->
-    <section id="about" class="max-w-7xl mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Students Learning" class="rounded-2xl shadow-2xl border-4 border-white">
-            </div>
-            <div>
-                <span class="text-amber-600 font-bold uppercase tracking-wider text-sm">About Our School</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mt-2 mb-6">Nurturing Minds, Inspiring Excellence Since Inception</h2>
-                <p class="text-slate-600 mb-6 leading-relaxed">Model School, Baharagora stands as a beacon of academic brilliance in the region. We focus on a holistic educational approach that blends traditional values with modern technology.</p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-check-circle text-emerald-500 text-lg"></i>
-                        <span class="font-medium text-slate-700">Smart Classrooms</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-check-circle text-emerald-500 text-lg"></i>
-                        <span class="font-medium text-slate-700">Big Playground</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-check-circle text-emerald-500 text-lg"></i>
-                        <span class="font-medium text-slate-700">Rich Library</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-check-circle text-emerald-500 text-lg"></i>
-                        <span class="font-medium text-slate-700">Safe Environment</span>
-                    </div>
+        <section id="home" class="hero-bg h-[600px] flex items-center text-white text-center px-4 relative">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <span class="bg-emerald-500/90 backdrop-blur-md text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Shaping Future Leaders</span>
+                <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-6 drop-shadow-md leading-tight">Welcome to <span class="text-emerald-300">Model School</span>, Baharagora</h1>
+                <p class="text-lg md:text-xl text-emerald-100 mb-8 max-w-2xl mx-auto font-light">Providing quality education, modern infrastructure, and moral values to empower the students of Baharagora.</p>
+                <div class="space-x-4">
+                    <a href="#about" class="bg-emerald-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-emerald-500 transition-all inline-block shadow-lg shadow-emerald-900/30 transform hover:-translate-y-0.5">Explore School</a>
+                    <a href="#contact" class="border-2 border-white/80 backdrop-blur-sm px-8 py-3.5 rounded-lg font-semibold hover:bg-white hover:text-emerald-950 transition-all inline-block transform hover:-translate-y-0.5">Admission Info</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PHOTO GALLERY SECTION -->
-    <section id="gallery" class="bg-indigo-950 text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-amber-400 font-bold uppercase tracking-wider text-sm">Glimpses of Model School</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2">Our School Gallery</h2>
-                <div class="h-1 w-20 bg-amber-400 mx-auto mt-4 rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Image 1 -->
-                <div class="overflow-hidden rounded-xl shadow-lg group relative">
-                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" alt="Classroom">
-                    <div class="absolute inset-0 bg-indigo-900/70 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="font-bold text-lg text-amber-400">Smart Classroom</span>
-                    </div>
-                </div>
-                <!-- Image 2 -->
-                <div class="overflow-hidden rounded-xl shadow-lg group relative">
-                    <img src="https://iili.io/CYQid9j.png" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" alt="Campus Building">
-                    <div class="absolute inset-0 bg-indigo-900/70 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="font-bold text-lg text-amber-400">School Building</span>
-                    </div>
-                </div>
-                <!-- Image 3 -->
-                <div class="overflow-hidden rounded-xl shadow-lg group relative">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" alt="Students">
-                    <div class="absolute inset-0 bg-indigo-900/70 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="font-bold text-lg text-amber-400">Computer Lab</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT & FOOTER SECTION -->
-    <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
-            <!-- Contact Form -->
-            <div class="p-8 md:p-12">
-                <h3 class="text-2xl font-bold text-indigo-950 mb-2">Get In Touch</h3>
-                <p class="text-slate-600 mb-6">Have any questions about admission or curriculum? Send us a message.</p>
-                <form class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
-                        <input type="text" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-indigo-900" placeholder="Enter your full name">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                        <input type="email" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-indigo-900" placeholder="Enter your email">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Message</label>
-                        <textarea rows="4" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-indigo-900" placeholder="Type your message here..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-indigo-900 text-white font-semibold py-3 rounded-lg hover:bg-amber-500 hover:text-indigo-950 transition shadow-md">Submit Message</button>
-                </form>
-            </div>
-            <!-- School Info & Decorative Map Holder -->
-            <div class="bg-slate-100 p-8 md:p-12 flex flex-col justify-between border-l border-slate-200">
+        <section class="max-w-7xl mx-auto px-6 -mt-16 relative z-20 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-xl shadow-slate-200/50 border-b-4 border-emerald-700 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-start space-x-4">
+                <i class="fas fa-book-reader text-3xl text-emerald-700 mt-1"></i>
                 <div>
-                    <h3 class="text-2xl font-bold text-indigo-950 mb-6">Contact Information</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-indigo-900 text-white p-3 rounded-full"><i class="fas fa-map-marked-alt"></i></div>
-                            <div>
-                                <h4 class="font-semibold text-indigo-950">Address</h4>
-                                <p class="text-sm text-slate-600">Model School Baharagora, Near NH-18, Baharagora, East Singhbhum, Jharkhand, Pin - 832101</p>
-                            </div>
+                    <h3 class="text-xl font-bold mb-2 text-emerald-950">Expert Faculty</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Highly qualified and dedicated teachers committed to individual student growth.</p>
+                </div>
+            </div>
+            <div class="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-xl shadow-slate-200/50 border-b-4 border-emerald-500 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-start space-x-4">
+                <i class="fas fa-flask text-3xl text-emerald-500 mt-1"></i>
+                <div>
+                    <h3 class="text-xl font-bold mb-2 text-emerald-950">Modern Labs</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Well-equipped Science, Mathematics, and Computer labs for practical learning.</p>
+                </div>
+            </div>
+            <div class="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-xl shadow-slate-200/50 border-b-4 border-emerald-900 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-start space-x-4">
+                <i class="fas fa-trophy text-3xl text-emerald-900 mt-1"></i>
+                <div>
+                    <h3 class="text-xl font-bold mb-2 text-emerald-950">Sports & Arts</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Encouraging students to excel in co-curricular activities, sports, and cultural events.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-2 bg-gradient-to-r align-middle from-emerald-600 to-emerald-400 rounded-2xl blur opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Students Learning" class="rounded-2xl shadow-xl relative border border-white">
+                </div>
+                <div>
+                    <span class="text-emerald-600 font-bold uppercase tracking-wider text-sm">About Our School</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-emerald-950 mt-2 mb-6">Nurturing Minds, Inspiring Excellence Since Inception</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Model School, Baharagora stands as a beacon of academic brilliance in the region. We focus on a holistic educational approach that blends traditional values with modern technology.</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3 group">
+                            <i class="fas fa-check-circle text-emerald-500 text-lg group-hover:scale-110 transition"></i>
+                            <span class="font-medium text-slate-700">Smart Classrooms</span>
                         </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-indigo-900 text-white p-3 rounded-full"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <h4 class="font-semibold text-indigo-950">School Hours</h4>
-                                <p class="text-sm text-slate-600">Mon - Sat: 08:00 AM - 02:00 PM</p>
-                            </div>
+                        <div class="flex items-center space-x-3 group">
+                            <i class="fas fa-check-circle text-emerald-500 text-lg group-hover:scale-110 transition"></i>
+                            <span class="font-medium text-slate-700">Big Playground</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <i class="fas fa-check-circle text-emerald-500 text-lg group-hover:scale-110 transition"></i>
+                            <span class="font-medium text-slate-700">Rich Library</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <i class="fas fa-check-circle text-emerald-500 text-lg group-hover:scale-110 transition"></i>
+                            <span class="font-medium text-slate-700">Safe Environment</span>
                         </div>
                     </div>
                 </div>
-                <div class="mt-8 bg-indigo-900 text-amber-400 p-4 rounded-xl text-center shadow-inner">
-                    <p class="font-semibold text-sm"><i class="fas fa-star mr-1"></i> Government Model School Initiative <i class="fas fa-star ml-1"></i></p>
+            </div>
+        </section>
+
+        <section id="gallery" class="bg-gradient-to-b from-emerald-950 to-emerald-900 text-white py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="text-emerald-400 font-bold uppercase tracking-wider text-sm">Glimpses of Model School</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Our School Gallery</h2>
+                    <div class="h-1 w-20 bg-emerald-400 mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="overflow-hidden rounded-2xl shadow-lg group relative border border-emerald-800">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" alt="Classroom">
+                        <div class="absolute inset-0 bg-emerald-950/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="font-bold text-lg text-emerald-400 tracking-wider">Smart Classroom</span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl shadow-lg group relative border border-emerald-800">
+                        <img src="https://iili.io/CYQid9j.png" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" alt="Campus Building">
+                        <div class="absolute inset-0 bg-emerald-950/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="font-bold text-lg text-emerald-400 tracking-wider">School Building</span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden rounded-2xl shadow-lg group relative border border-emerald-800">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" alt="Students">
+                        <div class="absolute inset-0 bg-emerald-950/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="font-bold text-lg text-emerald-400 tracking-wider">Computer Lab</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-indigo-950 text-slate-400 text-center py-6 border-t border-indigo-900">
-        <p class="text-sm">&copy; 2026 Model School, Baharagora. All Rights Reserved. Designed for Excellence.</p>
-    </footer>
+        <section id="contact" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/60 overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-emerald-50">
+                <div class="p-8 md:p-12">
+                    <h3 class="text-2xl font-bold text-emerald-950 mb-2">Get In Touch</h3>
+                    <p class="text-slate-600 mb-6">Have any questions about admission or curriculum? Send us a message.</p>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
+                            <input type="text" class="w-full p-3 border border-slate-200 rounded-xl focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 transition" placeholder="Enter your full name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                            <input type="email" class="w-full p-3 border border-slate-200 rounded-xl focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 transition" placeholder="Enter your email">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+                            <textarea rows="4" class="w-full p-3 border border-slate-200 rounded-xl focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 transition" placeholder="Type your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-800 text-white font-semibold py-3.5 rounded-xl hover:bg-emerald-700 transition shadow-md shadow-emerald-800/10">Submit Message</button>
+                    </form>
+                </div>
+                <div class="bg-emerald-50/40 p-8 md:p-12 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-emerald-100">
+                    <div>
+                        <h3 class="text-2xl font-bold text-emerald-950 mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-emerald-800 text-white p-3 rounded-xl shadow-md shadow-emerald-800/10"><i class="fas fa-map-marked-alt"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-emerald-950">Address</h4>
+                                    <p class="text-sm text-slate-600">Model School Baharagora, Near NH-18, Baharagora, East Singhbhum, Jharkhand, Pin - 832101</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-emerald-800 text-white p-3 rounded-xl shadow-md shadow-emerald-800/10"><i class="fas fa-clock"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-emerald-950">School Hours</h4>
+                                    <p class="text-sm text-slate-600">Mon - Sat: 08:00 AM - 02:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-emerald-900 text-emerald-300 p-4 rounded-2xl text-center shadow-inner">
+                        <p class="font-semibold text-sm"><i class="fas fa-star mr-1"></i> Government Model School Initiative <i class="fas fa-star ml-1"></i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-emerald-950 text-emerald-400/60 text-center py-6 border-t border-emerald-900">
+            <p class="text-sm">&copy; 2026 Model School, Baharagora. All Rights Reserved. Designed for Excellence.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        const mainContent = document.getElementById('mainContent');
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+        function openSidebar() {
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            setTimeout(() => {
+                overlay.classList.remove('opacity-0');
+            }, 10);
+            // Disable background pointer events (clicks) when menu is open
+            mainContent.classList.add('pointer-events-none', 'select-none');
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+            }, 300);
+            // Re-enable clicks on background content
+            mainContent.classList.remove('pointer-events-none', 'select-none');
+        }
+
+        menuBtn.addEventListener('click', openSidebar);
+        closeBtn.addEventListener('click', closeSidebar);
+        overlay.addEventListener('click', closeSidebar);
+        
+        // Close sidebar when a link inside it is clicked
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', closeSidebar);
+        });
+    </script>
 
 </body>
 </html>
